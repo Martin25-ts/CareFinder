@@ -1,0 +1,47 @@
+.register-table1 .register-table-left form .form-input-agreement{
+
+    position: block;
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    min-height: 38px;
+    max-height: 38px;
+    max-width: 494px;
+    max-height: 494px;
+    gap: 5px;
+}
+
+
+.register-table1 .register-table-left form .form-input-agreement input{
+    max-width: 23px;
+    min-width: 23px;
+    max-height: 27px;
+
+    border-radius: 20px;
+}
+
+.register-table1 .register-table-left form .form-input-agreement span{
+    max-width: 466px;
+    min-width: 466px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+
+    color: #000000;
+}
+
+.register-table1 .register-table-left .sign-up{
+    display: flex;
+
+    justify-content: center;
+}
+.register-table1 .register-table-left a button{
+
+    min-width: 494px;
+    min-height: 54px;
+
+
+}
+

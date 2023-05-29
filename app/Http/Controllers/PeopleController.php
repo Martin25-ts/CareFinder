@@ -11,9 +11,35 @@ class PeopleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    public function index(){
+
         return view('dashboard');
+    }
+
+    public function register(){
+
+        return view('register');
+    }
+
+    public function register2(){
+
+        return view('register2');
+    }
+
+    public function login(){
+        return view('login');
+    }
+
+    public function Backup_1(){
+        return view('backup-page-1');
+    }
+
+    public function Backup_2(){
+        return view('backup-page-2');
+    }
+
+    public function Backup_3(){
+        return view('backup-page-3');
     }
 
     /**

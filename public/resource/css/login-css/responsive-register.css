@@ -1,0 +1,12 @@
+
+
+@media screen and(min-width : 2000px) {
+    .register-table1 .register-table-left{
+        width: 1203px;
+        max-width: 1203px;
+
+        display: none;
+    }
+
+
+}

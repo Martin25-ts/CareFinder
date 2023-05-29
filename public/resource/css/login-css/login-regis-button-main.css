@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+.login-sign-up{
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    z-index: 9999;
+}
+.login-sign-up-button{
+    display: flex;
+    /* position: absolute; */
+
+
+    left: 80%;
+    top: 5%;
+}
+
+.login-sign-up-button a button{
+    background: #81B214;
+    border: none;
+    border-radius: 35px 0px 0px 35px;
+    padding: 5px 22px 5px 23px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: #F1F1E8;
+    cursor: pointer;
+
+}
+
+.login-sign-up-button .register-navbar{
+    min-width: 126px;
+}
+
+
+.login-sign-up-button .register-navbar button{
+
+    background: #587518;
+    border-radius:  0px 35px 35px 0px;
+    border-left: 4px solid #FFFEFE;
+}

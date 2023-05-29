@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+
+}
+
+body{
+    background: linear-gradient(180deg, #206A5D 0%, #F1F1E8 50%, #F1F1E8 100%);
+    background-attachment: fixed;
+
+}
+
+/* Section Registration */
+.register-table1{
+    /* Parent Table 1 */
+    height: fit-content;
+    width: fit-content;
+    max-width: 1203px;
+    max-height: 738px;
+    background: #FFFFFF;
+    box-shadow: 0px 12px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 12px 12px 12px 12px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.register-table1 .register-table-left{
+    /* Table Left */
+    /* width: fit-content; */
+    max-width: 672px;
+    width: 672px;
+
+    /* height: fit-content; */
+    max-height: 738px;
+    height: 738px;
+
+
+    text-align: center;
+}
+
+.register-table1 .register-table-left .image-signup img{
+    /* Table Left image */
+    width: 75px;
+    height: 60px;
+    padding-top: 23px;
+}
+.register-table1 .register-table-left form div{
+    /* Table Left all div in form */
+    display: flow-root;
+    margin-bottom: 5.3%;
+}
+
+.register-table1 .register-table-left form div img{
+    /* image inside input label */
+    max-width: 19px;
+    max-height: 22px;
+    position: absolute;
+    padding: 13px 15px 13px 7px;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.register-table1 .register-table-left form div{
+    /* min-width: 494px;
+    max-width: 494px; */
+
+    padding: 0 54px 0 54px;
+}
+.register-table1 .register-table-left form div input {
+
+    padding: 15px 0 8px 40px;
+    font-weight: 400;
+    font-size: 20px;
+    min-width: 454px;
+    max-width: 454px;
+    /* line-height: 48px; */
+    letter-spacing: 0.5px;
+    /* color: black; */
+    background-color:#E7E7E7;
+    border: none;
+    border-bottom: #206A5D 1px solid;
+    outline: none;
+
+}
+
+
+.register-table1 .register-table-left form div input:-ms-input-placeholder  {
+    color: #c4c3ca;
+    font-family: 'Oxanium', cursive;
+    opacity: 0.7;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.register-table1 .register-table-left form div input::-moz-placeholder  {
+    color: #c4c3ca;
+    font-family: 'Oxanium', cursive;
+    opacity: 0.7;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.register-table1 .register-table-left form div input:-moz-placeholder  {
+    color: #c4c3ca;
+    font-family: 'Oxanium', cursive;
+    opacity: 0.7;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.register-table1 .register-table-left form div input::-webkit-input-placeholder  {
+    color: #c4c3ca;
+    font-family: 'Oxanium', cursive;
+    opacity: 0.7;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.register-table1 .register-table-left form div input:focus:-ms-input-placeholder  {
+    opacity: 0;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.register-table1 .register-table-left form div input:focus::-moz-placeholder  {
+    opacity: 0;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.register-table1 .register-table-left form div input:focus:-moz-placeholder  {
+    opacity: 0;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.register-table1 .register-table-left form div input:focus::-webkit-input-placeholder  {
+    opacity: 0;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+
+.register-table1 .register-table-left form div #error-message{
+    /* display: none; */
+    /* opacity: 0; */
+
+}
+
+.register-table1 .register-table-left button{
+    cursor: pointer;
+    font-family: 'Oxanium', cursive;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    color: #FFFFFF;
+
+    width: 218px;
+    height: 48px;
+    background: #206A5D;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    border: none;
+
+    position: absolute;
+
+}
+
+.register-table1 .register-table-right{
+    border-radius: 0 12px 12px 0;
+    min-width: 601px;
+    max-width: 601px;
+    max-height: 738px;
+    max-height: 738px;
+    background: #BFDCAE;
+}
+
+@media screen and(min-width : 768px) {
+    .register-table1 .register-table-right{
+        display: none;
+    }
+}
+
+.register-table1 .register-table-right img{
+    padding: 90px 19px 96px 19px;
+}
+
+
+
+
+
+
+
+

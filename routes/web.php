@@ -14,4 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', [PeopleController::class,'index']);
+Route::get('/register', [PeopleController::class,'register']);
+Route::get('/register2', [PeopleController::class,'register2']);
+Route::get('/login', [PeopleController::class,'login']);
+Route::get('/backup-input-email', [PeopleController::class,'Backup_1']);
+Route::get('/backup-verification-email', [PeopleController::class,'Backup_2']);
+Route::get('/backup-confirm', [PeopleController::class,'Backup_3']);
