@@ -10,10 +10,10 @@
 {{-- ini buat ngisi href style css --}}
 @push('style-conten')
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('resource/css/login-css/register-tab1.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('resource/css/login-css/register-tab2.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('resource/css/login-css/login-regis-button-main.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('resource/css/login-css/responsive-register.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('resource/css/register-css/register-tab1.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('resource/css/register-css/register-tab2.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('resource/css/login-regis-button-main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('resource/css/register-css/responsive-register.css') }}">
     <link rel="shortcut icon" href="{{ asset('resource/image/logo/Logo Bulet.png') }}">
 
 @endpush

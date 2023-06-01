@@ -9,14 +9,14 @@
 
 {{-- ini buat ngisi href style css --}}
 @push('style-conten')
-    <link rel="stylesheet" type="text/css" href="{{ asset('resource/css/login-css/login-regis-button-main.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('resource/css/login-css/register-tab1.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('resource/css/login-css/responsive-register.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('resource/css/login-regis-button-main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('resource/css/register-css/register-tab1.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('resource/css/register-css/responsive-register.css') }}">
     <link rel="shortcut icon" href="{{ asset('resource/image/logo/Logo Bulet.png') }}">
     @endpush
 
 @push('script-conten')
-    <script type="text/javascript" src="{{ asset('resource/Register/Register-Validate.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('resource/js/register-js/Register-Validate.js') }}"></script>
 @endpush
 
 

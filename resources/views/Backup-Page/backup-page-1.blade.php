@@ -3,13 +3,13 @@
 @section('title', 'CareFinder - Backup')
 
 @push('style-conten')
-    <link rel="stylesheet" type="text/css" href="{{ asset('resource/css/login-css/login-regis-button-main.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('resource/css/login-css/backup-page-1.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('resource/css/login-regis-button-main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('resource/css/backup-css/backup-page-1.css') }}">
     <link rel="shortcut icon" href="{{ asset('resource/image/logo/Logo Bulet.png') }}">
 @endpush
 
 @push('script-conten')
-    <script type="text/javascript" src="{{ asset('resource/Backup/backup-page-1.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('resource/js/bacup-js/backup-page-1.js') }}"></script>
 @endpush
 
 @push('style-font-family')
@@ -45,7 +45,7 @@
                     <input type="text" id="email-telephone" name="email-telephone" placeholder="Email atau No Telepon" autocomplete="off">
                     <small id="error-message-input" style="position: absolute; display: flex;">error</small>
                 </div>
-                <button>
+                <button type="submit">
                     Selanjutnya
                 </button>
             </form>

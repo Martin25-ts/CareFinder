@@ -18,12 +18,12 @@ class PeopleController extends Controller
 
     public function register(){
 
-        return view('register');
+        return view('Register-Page.register');
     }
 
     public function register2(){
 
-        return view('register2');
+        return view('Register-Page.register2');
     }
 
     public function login(){
@@ -31,15 +31,15 @@ class PeopleController extends Controller
     }
 
     public function Backup_1(){
-        return view('backup-page-1');
+        return view('Backup-Page.backup-page-1');
     }
 
     public function Backup_2(){
-        return view('backup-page-2');
+        return view('Backup-Page.backup-page-2');
     }
 
     public function Backup_3(){
-        return view('backup-page-3');
+        return view('Backup-Page.backup-page-3');
     }
 
     /**

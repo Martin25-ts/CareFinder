@@ -3,13 +3,13 @@
 @section('title', 'CareFinder - Login')
 
 @push('style-conten')
-    <link rel="stylesheet" type="text/css" href="{{ asset('resource/css/login-css/login-regis-button-main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('resource/css/login-regis-button-main.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('resource/css/login-css/login.css') }}">
     <link rel="shortcut icon" href="{{ asset('resource/image/logo/Logo Bulet.png') }}">
 @endpush
 
 @push('script-conten')
-    <script type="text/javascript" src="{{ asset('resource/Register/ValidateInput.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('resource/js/login-js/ValidateInput.js') }}"></script>
 @endpush
 
 @push('style-font-family')
@@ -62,7 +62,7 @@
                     <a href="/backup-input-email">Reset disini</a>
                 </p>
                 <a href="/register">
-                    <button> Sign Up</button>
+                    <button type="submit">Sign Up</button>
                 </a>
             </div>
         </div>
