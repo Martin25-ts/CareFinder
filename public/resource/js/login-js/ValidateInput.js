@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
-    $('form').submit(function(event) {
+    $('form').submit(function() {
       $('small').hide();
-      event.preventDefault();
+
       var email = $('input[type="text"]').val();
       var password = $('input[type="password"]').val();
       var isvalid = true;

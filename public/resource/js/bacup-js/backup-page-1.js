@@ -1,6 +1,7 @@
 $(document).ready(function() {
     $('small').hide();
     $('form').submit(function() {
+
       var input = $('#email-telephone').val();
 
       var isvalid = true;
