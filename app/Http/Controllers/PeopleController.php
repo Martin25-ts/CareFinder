@@ -20,12 +20,12 @@ class PeopleController extends Controller
 
     public function favorite($name){
 
-        return view('favorite',['name' => $name]);
+        return view('User-page.favorite',['name' => $name]);
     }
 
     public function profile($name){
 
-        return view('profile',['name' => $name]);
+        return view('User-page.profile',['name' => $name]);
     }
 
     public function register(){
