@@ -124,6 +124,12 @@ p{
     opacity: 50%;
 }
 
+.rememberme-container{
+    margin: 2px;
+    margin-left: -58px;
+    margin-top: 0px;
+}
+
 form button{
     border: none;
     outline: none;

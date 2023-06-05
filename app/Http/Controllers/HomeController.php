@@ -2,72 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\People;
 use Illuminate\Http\Request;
 
-
-class PeopleController extends Controller
+class HomeController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(){
-        $people = new People();
-        return view('dashboard',compact('people'));
-    }
-
-    public function favorite($name){
-
-        return view('favorite',['name' => $name]);
-    }
-
-    public function profile($name){
-
-        return view('profile',['name' => $name]);
-    }
-
-    public function register(){
-
-
-        return view('Register-Page.register');
-
-
-
-    }
-
-    public function inputregister(Request $req){
-        $people = new People();
-        $people->namadepan = $req->namadepan;
-        $people->namabelakang = $req->namabelakang;
-        $people->email = $req->email;
-        $people->phone_number = $req->phone_number;
-        $people->password = $req->password;
-        $people->password_confirm = $req->password_confirm;
-
-        $people->save();
-
-        return view('Register-Page.register2');
-
-    }
-
-    public function register2(){
-
-        return view('Register-Page.register2');
-    }
-
-    public function Backup_1(){
-        return view('Backup-Page.backup-page-1');
-    }
-
-    public function Backup_2(){
-        return view('Backup-Page.backup-page-2');
-    }
-
-    public function Backup_3(){
-        return view('Backup-Page.backup-page-3');
-    }
+    // public function landingpage()
+    // {
+    //     return view('dashboard');
+    // }
 
     /**
      * Show the form for creating a new resource.

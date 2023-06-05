@@ -95,7 +95,11 @@ $(document).ready(function() {
     // console.log("Confirm Password : ", passwordConfirm);
     // Mengalihkan halaman jika semua validasi berhasil
     if (isValid) {
-      window.location.href = '/register2';
+        // var xhr = new XMLHttpRequest();
+        // xhr.open("POST", $('form').action, true);
+
+        // window.location.href = '/get-register-page1-user-confirm';
+
     }else{
         $('small').show();
     }

@@ -1,0 +1,114 @@
+.nav-auth {
+  background: #81b214;
+  color: #f1f1e8 !important;
+  text-align: center;
+}
+.active {
+  border-bottom: 3px solid #81b214;
+}
+#content {
+  background: #e6e6e0;
+  padding: 70px 0 150px 0;
+}
+.border-radius-left {
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+.border-radius-right {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+.border-left-auth {
+  border-left: 1px solid #f1f1e8;
+}
+.site-heading {
+  margin-top: 120px;
+}
+.subtitle-heading {
+  font-weight: 100;
+  margin-top: 0;
+  font-size: 20px;
+}
+.btn-location-active {
+  width: 100%;
+  background: white;
+  font-weight: 400;
+  border: 1px solid #81b214;
+  color: #81b214;
+  border-radius: 20px;
+  padding: 10px 25px !important;
+}
+.btn-location {
+  width: 100%;
+  background: white;
+  font-weight: 400;
+  border: 1px solid white;
+  color: #1e1e1e;
+  border-radius: 20px;
+  padding: 10px 25px !important;
+}
+.hospital-name {
+  font-weight: 600;
+}
+.hospital-card {
+  border-radius: 10px;
+}
+.hospital-card > img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+footer {
+  background: #206a5d;
+  padding: 50px 0;
+}
+.footer-text {
+  color: #f1f1e8;
+}
+.card-search {
+  padding: 100px 50px 60px 50px;
+}
+.btn-search {
+  background: #81b214;
+  color: white;
+  border-radius: 50px;
+  border: 1px solid #81b214;
+}
+.border-radius-10 {
+  border-radius: 10px;
+}
+.border-radius-30 {
+  border: none;
+  border-radius: 30px;
+}
+.info-search {
+  position: absolute;
+  z-index: 2;
+  top: 44%;
+  width: 100%;
+}
+.content-search {
+  margin-top: 60px;
+}
+.separator {
+  border: 1px solid #bfdcae;
+}
+.badge-available {
+  position: absolute;
+  top: 65%;
+  right: 5%;
+  background: #81b214;
+  color: white;
+  font-size: 15px;
+  padding: 8px 15px;
+  border-radius: 20px;
+}
+.badge-full {
+  position: absolute;
+  top: 65%;
+  right: 5%;
+  background: #b50606;
+  color: white;
+  font-size: 15px;
+  padding: 8px 15px;
+  border-radius: 20px;
+}

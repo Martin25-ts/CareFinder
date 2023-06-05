@@ -1,0 +1,27 @@
+
+.login-confirm{
+    max-width: 267px;
+    max-height: 59px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.login-button-confirm{
+    border: none;
+    max-height: 40px;
+    height: 40px;
+    border-radius: 0 95px 95px 0;
+    /* box-shadow: inset -110.883px 0px 0px 0px #81B214; */
+    background: transparent;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+

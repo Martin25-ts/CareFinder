@@ -49,7 +49,7 @@
                 <h4 class="sign-up-deskripsi" style="font-size: 40px;  font-weight: 600;color: #615D5D;font-size: 20px;line-height: 25px;">Daftarkan Akunmu</h4>
             </div>
 
-            <form action="" method="POST" >
+            <form action="/register-page1-confirm-next" method="POST" >
 
                 <div class="form-input-nama-depan" >
                     <img src="{{ asset('resource/image/Regis/CareFinder-Register-UserName-Logo.svg')}}" alt="nama-depan-logo">
@@ -72,7 +72,7 @@
 
                 <div class="form-input-phone-number" >
                     <img src="{{ asset('resource/image/Regis/CareFinder-Register-Phone-Logo.svg') }}" alt="phone-number-logo">
-                    <input type="" name="phone-number" id="phone-number" placeholder="No Telepon" autocomplete="off">
+                    <input type="" name="phone_number" id="phone-number" placeholder="No Telepon" autocomplete="off">
                     <small id="error-message-phone-number" style="position: absolute; display: flex; padding-left: 44px; font-family: 'Oxanium', cursive;">error-message</small>
                 </div>
 
@@ -84,7 +84,7 @@
 
                 <div class="form-input-confirm-kata-sandi" >
                     <img src="{{ asset('resource/image/Regis/CareFinder-Register-Password-Logo.svg') }}" alt="nama-depan-logo">
-                    <input type="password" name="password-confirm" id="password-confirm" placeholder="Konfirmasi Kata Sandi" autocomplete="off">
+                    <input type="password" name="password_confirm" id="password-confirm" placeholder="Konfirmasi Kata Sandi" autocomplete="off">
                     <small id="error-message-password-confirm" style="position: absolute; display: flex; padding-left: 44px; font-family: 'Oxanium', cursive;">error-message</small>
                 </div>
                 <button type="submit" class="my-button" id="my-button">Selanjutnya</button>
@@ -94,6 +94,7 @@
 
         <div class="register-table-right" style="display: block;"  >
             <img src="{{ asset('resource/image/logo/Logo (Kosongan).svg') }}" alt="logo-CareFinder" style="width: ">
+
         </div>
     </div>
 

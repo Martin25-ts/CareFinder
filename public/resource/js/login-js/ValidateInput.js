@@ -27,7 +27,7 @@ $(document).ready(function() {
         // Lakukan tindakan setelah password valid
       }
       if (isvalid) {
-        window.location.href = '/dashboard';
+        window.location.href = '/login-confirm';
       }
     });
 

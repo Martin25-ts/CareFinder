@@ -16,8 +16,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\People::factory(10)->create();
-        $this->call(PeopleSeeder::class);
+        \App\Models\User::factory(10)->create();
+        $this->call(MsBloodSeeder::class);
+        $this->call(MsGenderSeeder::class);
+
 
     }
 }
