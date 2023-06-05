@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Exceptions;
-
+use Illuminate\Database\QueryException;
+use symfony\Component\Routing\Exception\RouteNotFoundException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use PDOException;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -24,6 +26,23 @@ class Handler extends ExceptionHandler
     protected $dontReport = [
         //
     ];
+
+
+    public function render($request, Throwable $exception)
+    {
+        if ($exception instanceof QueryException || $exception instanceof PDOException) {
+            return redirect()->route('error');
+        }
+
+        if ($exception instanceof RouteNotFoundException) {
+            return redirect('/');
+        }
+
+        return parent::render($request, $exception);
+    }
+
+
+
 
     /**
      * A list of the inputs that are never flashed to the session on validation exceptions.

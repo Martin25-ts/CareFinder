@@ -28,7 +28,7 @@
     <script>
         $(document).ready(function() {
             var button = $("#login-button-confirm");
-            var buttonWidth = button.outerWidth() - 12.5;
+            var buttonWidth = button.outerWidth() - 12;
             console.log(buttonWidth * -1);
             button.css("box-shadow", "inset -" + buttonWidth + "px 0px 0px 0px #81B214");
         });
@@ -106,7 +106,7 @@
                                         @endif
                                     @else
                                         <img src="{{ asset(Auth::user()->userprofile) }}"
-                                            style="max-width: 59px; max-height: 59px;  border-radius: 360px" alt="error">
+                                            style="width: 60px; height: 59px;  border-radius: 360px" alt="error">
                                     @endif
 
                                     <button class="login-button-confirm" id="login-button-confirm"> <span

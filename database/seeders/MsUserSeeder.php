@@ -16,13 +16,13 @@ class MsUserSeeder extends Seeder
     public function run()
     {
         $data = [
-            'userid' => 'US003',
-            'userfname' => 'Putra Panca',
-            'userlname' => 'Prasetya',
-            'password' => bcrypt('panca123'),
+            'userid' => 'US005',
+            'userfname' => 'Muhhamad Adzka',
+            'userlname' => 'Fariqi',
+            'password' => bcrypt('adzka123'),
             'userphone' => '082246078543',
-            'useremail' => 'putra.prasetya@binus.ac.id',
-            'userprofile' => 'resource\profileuser\background panca.jpg',
+            'useremail' => 'muhammad.fariqi@binus.ac.id',
+            'userprofile' => 'resource\profileuser\background adzka.jpg',
             'userheight' => 175,
             'userweight' => 70,
             'bloodId' => 'BL001',
@@ -31,7 +31,7 @@ class MsUserSeeder extends Seeder
             'userdisesase' => 'Kurang kasih sayang perempuan',
             'genderId' => 'GN001',
             'statusId' => 'ST001',
-            'remeber_token' => 'NULL'
+            'remember_token' => 'NULL'
         ];
 
         DB::table('msuser')->insert($data);

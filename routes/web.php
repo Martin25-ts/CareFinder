@@ -30,6 +30,10 @@ Route::get('/{name}-favorite',[PeopleController::class,'favorite']);
 Route::get('/{name}-profile',[PeopleController::class,'profile']);
 Route::get('/logout',[AuthController::class,'logout']);
 Route::get('/dashboard',[DashboardController::class,'dashboard'])->middleware('auth')->name('dashboard');
+Route::get('/error', function () {
+    return view('error');
+})->name('error');
+
 
 Route::post('register-page1-confirm-next',[PeopleController::class,'inputregister']);
 Route::post('/login',[AuthController::class,'login']);
