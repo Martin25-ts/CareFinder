@@ -16,9 +16,10 @@ class MsRelationshipSeeder extends Seeder
     public function run()
     {
         $data = [
-            ['relationshipId' => 'Rl001', 'relationshipname' => 'Single'],
-            ['relationshipId' => 'Rl002', 'relationshipname' => 'Merried'],
-            ['relationshipId' => 'Rl003', 'relationshipname' => 'Divorced'],
+            ['relationshipId' => 'RL000', 'relationshipname' => 'required'],
+            ['relationshipId' => 'RL001', 'relationshipname' => 'Single'],
+            ['relationshipId' => 'RL002', 'relationshipname' => 'Merried'],
+            ['relationshipId' => 'RL003', 'relationshipname' => 'Divorced'],
 
         ];
 

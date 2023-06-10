@@ -44,6 +44,27 @@ class User extends Authenticatable
         $this->attributes['userid'] = $value;
     }
 
+
+    public function gender()
+    {
+        return $this->belongsTo(Gender::class, 'genderId');
+    }
+
+    public function status()
+    {
+        return $this->belongsTo(Status::class, 'statusId');
+    }
+
+    public function blood()
+    {
+        return $this->belongsTo(Blood::class, 'bloodId');
+    }
+
+    public function relationship()
+    {
+        return $this->belongsTo(Relationship::class, 'relationshipId');
+    }
+
     /**
      * The attributes that are mass assignable.
      *

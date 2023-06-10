@@ -9,6 +9,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
     min-height: 100vh;
     background: linear-gradient(180deg, #206A5D 0%, #F1F1E8 52.08%, #F1F1E8 100%);;
 }
@@ -16,14 +17,18 @@ body {
 .container{
     width: 100%;
     display: flex;
+    gap: 78px;
     max-width: 900px;
-    background: #fff;
+    background: #bfdcae;
     border-radius: 8px;
     box-shadow: 0px 12px 4px rgba(0, 0, 0, 0.13);
 }
 
 .login{
+    border-radius: 12px 0 0 12px;
     width: 450px;
+    background: white;
+    padding-bottom: 20px;
 }
 
 form{
@@ -53,6 +58,10 @@ p{
     background: #bfdcae;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .right img{

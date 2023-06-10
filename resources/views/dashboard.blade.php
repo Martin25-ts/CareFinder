@@ -100,7 +100,7 @@
 
                                             <img src="{{ asset('resource/profileuser/male-default.png') }}"
                                                 style="max-width: 59px; max-height: 59px" alt="error">
-                                        @elseif (Auth::user()->genderId === 'GN003')
+                                        @elseif (Auth::user()->genderId === 'GN003' || Auth::user()->genderId === 'GN000')
                                             <img src="{{ asset('resource/profileuser/prefer-not-to-say-default.png') }}"
                                                 style="max-width: 59px; max-height: 59px" alt="error">
                                         @endif
@@ -329,7 +329,7 @@
 @endsection
 
 @section('footer')
-    <footer>
+    <footer class="#content">
         <div class="container px-4 px-lg-5">
             <div class="row">
                 <div class="row">

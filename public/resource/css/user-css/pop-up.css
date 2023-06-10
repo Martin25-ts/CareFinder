@@ -1,0 +1,78 @@
+
+.pop-up-content{
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #FFFF;
+    position: fixed;
+    /* display: none; */
+    z-index: 999999999999;
+    text-align: center;
+    max-height: fit-content;
+    max-width: fit-content;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+
+}
+
+.pop-up-content h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 72px;
+}
+
+.pop-up-content div{
+    padding-bottom: 20px;
+}
+
+
+.pop-up-content div input{
+    background: #206A5D;
+    border-radius: 30px;
+    border: none;
+
+    padding: 5px 50px 5px 50px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 48px;
+    color: #FFF;
+}
+
+.pop-up-content div button{
+    background: #FFF;
+    border-radius: 30px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    border: 1px solid #000000;
+
+    padding: 5px 50px 5px 50px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 48px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.blur-page{
+    filter: blur(4px);
+
+}
+
+

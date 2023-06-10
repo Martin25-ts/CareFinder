@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
 .login-sign-up{
-    position: absolute;
-    right: 5%;
+    min-width: 100%;
     top: 5%;
-    z-index: 9999;
+    display: flex;
+    position: absolute;
+    justify-content: right;
+    right: 10%;
+
+
 }
 .login-sign-up-button{
     display: flex;
-    /* position: absolute; */
 
-
-    left: 80%;
-    top: 5%;
 }
 
 .login-sign-up-button a button{
@@ -23,7 +23,7 @@
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 17px;
     line-height: 30px;
     color: #F1F1E8;
     cursor: pointer;

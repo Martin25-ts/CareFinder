@@ -1,111 +1,143 @@
 
-$(document).ready(function() {
-  $('small').hide();
-  // Menggunakan metode submit() untuk form
-  $('form').submit(function(event) {
-    event.preventDefault(); // Menghentikan pengiriman form
+var global = true;
 
-    // Mendapatkan nilai input
-    var namadepan = $('#namadepan').val();
-    var namabelakang = $('#namabelakang').val();
-    var email = $('#email').val();
-    var phoneNumber = $('#phone-number').val();
-    var password = $('#password').val();
-    var passwordConfirm = $('#password-confirm').val();
+$(document).ready(function () {
+    $("form").submit(function (e) {
+        e.preventDefault();
 
-    // Mengatur status validasi
-    var isValid = true;
+        // Menghapus pesan error sebelumnya
+        $("small[id^='error-message']").text("");
+        var isvalid = true;
+        // Validasi Nama Depan
+        var namaDepan = $("#namadepan").val();
+        if (namaDepan === "") {
+            isvalid = false;
+            $("#error-message-namadepan").text("Nama Depan harus diisi");
+            $("#namadepan").css("border-bottom", "red 1px solid");
+        } else if (!/^[a-zA-Z\s]+$/.test(namaDepan)) {
+            isvalid = false;
+            $("#error-message-namadepan").text("Nama Depan hanya boleh berisi huruf");
+            $("#namadepan").css("border-bottom", "red 1px solid");
+        }else{
 
-    // Validasi Nama Depan
-    if (namadepan === '') {
-      isValid = false;
-      $('#error-message-namadepan').text('Nama Depan harus diisi').css('color', 'red');
-    } else {
-      $('#error-message-namadepan').text('').css('color', 'red');
-    }
+            $("#namadepan").css("border-bottom", "green 1px solid");
+        }
 
-    // Validasi Nama Belakang
-    if (namabelakang === '') {
-      isValid = false;
-      $('#error-message-namabelekang').text('Nama Belakang harus diisi').css('color', 'red');
-    } else {
-      $('#error-message-namabelekang').text('');
-    }
+        // Validasi Nama Belakang
+        var namaBelakang = $("#namabelakang").val();
+        if (namaBelakang === "") {
+            isvalid = false;
+            $("#error-message-namabelakang").text("Nama Belakang harus diisi");
+            $("#namabelakang").css("border-bottom", "red 1px solid");
+        } else if (!/^[a-zA-Z]+$/.test(namaBelakang)) {
+            isvalid = false;
+            $("#error-message-namabelakang").text("Nama Belakang hanya boleh berisi huruf");
+            $("#namabelakang").css("border-bottom", "red 1px solid");
+        }
+        else{
 
-    // Validasi Email
-    if (email === '') {
-      isValid = false;
-      $('#error-message-email').text('Email harus diisi').css('color', 'red');
-    } else if (!email.endsWith('@gmail.com')) {
-      isValid = false;
-      $('#error-message-email').text('Email harus berakhiran dengan @gmail.com').css('color', 'red');
-    } else if (email.indexOf('@') !== email.lastIndexOf('@')) {
-      isValid = false;
-      $('#error-message-email').text('Email hanya boleh memiliki satu karakter @').css('color', 'red');
-    } else if (email.startsWith('@') || email.indexOf('@') === 0) {
-      isValid = false;
-      $('#error-message-email').text('Email tidak boleh diawali dengan simbol @').css('color', 'red');
-    } else {
-      $('#error-message-email').text('');
-    }
+            $("#namabelakang").css("border-bottom", "green 1px solid");
+        }
 
-    var tool = new RegExp(/^0\d+$/);
-    console.log(phoneNumber);
-    if (phoneNumber === '') {
-      isValid = false;
-      $('#error-message-phone-number').text('Nomor Telepon harus diisi').css('color', 'red');
-    } else if (phoneNumber.length > 12 || phoneNumber < 7) {
-      isValid = false;
-      $('#error-message-phone-number').text('Nomor Telepon harus terdiri dari 12 angka').css('color', 'red');
-    }else if (!tool.test(phoneNumber)){
-        isValid = false;
+        // Validasi Email
+        var email = $("#email").val();
+        if (email === "") {
+            isvalid = false;
+            $("#error-message-email").text("Email harus diisi");
+            $("#email").css("border-bottom", "red 1px solid");
+        } else if (!/^[\w.-]+@[a-zA-Z_-]+?\.[a-zA-Z]{2,3}$/.test(email)) {
+            isvalid = false;
+            $("#error-message-email").text("Format Email tidak valid");
+            $("#email").css("border-bottom", "red 1px solid");
+        }else{
 
-        $('#error-message-phone-number').text('Invalid Nomor Telepone').css('color', 'red');
-    } else {
-      $('#error-message-phone-number').text('');
-    }
+            $("#email").css("border-bottom", "green 1px solid");
+        }
 
+        // Validasi Phone Number
+        var phoneNumber = $("#phone-number").val();
+        if (phoneNumber === "") {
+            isvalid = false;
+            $("#error-message-phone-number").text("No Telepon harus diisi");
+            $("#phone-number").css("border-bottom", "red 1px solid");
+        } else if (!/^0\d{11,14}$/.test(phoneNumber)) {
+            isvalid = false;
+            $("#error-message-phone-number").text("No Telepon tidak valid");
+            $("#phone-number").css("border-bottom", "red 1px solid");
+        }else{
 
+            $("#phone_number").css("border-bottom", "green 1px solid");
+        }
 
-    // Validasi Kata Sandi
-    if (password === '') {
-      isValid = false;
-      $('#error-message-password').text('Kata Sandi harus diisi').css('color', 'red');
-    } else {
-      $('#error-message-password').text('');
-    }
+        // Validasi DOB
+        var dob = new Date($("#DOB").val());
+        var today = new Date();
+        var minDOB = new Date();
+        minDOB.setFullYear(minDOB.getFullYear() - 17);
 
-    // Validasi Konfirmasi Kata Sandi
-    if (passwordConfirm === '') {
-      isValid = false;
-      $('#error-message-password-confirm').text('Konfirmasi Kata Sandi harus diisi').css('color', 'red');
-    } else if(passwordConfirm !== password){
-        isValid = false;
+        if (isNaN(dob.getTime())) {
+            isvalid = false;
+            $("#error-message-dob").text("Tanggal Lahir harus diisi");
+            $("#DOB").css("border-bottom", "red 1px solid");
+        } else if (dob > today || dob < minDOB) {
+            console.log(minDOB);
+            isvalid = false;
+            $("#error-message-dob").text("Umur harus minimal 17 tahun");
+            $("#DOB").css("border-bottom", "red 1px solid");
+        }else if(dob >= today){
+            isvalid = false;
+            $("#error-message-dob").text("Tanggal Lahir harus sebelum hari ini");
+            $("#DOB").css("border-bottom", "red 1px solid");
+        }else{
 
-        $('#error-message-password-confirm').text('Konfirmasi Kata Sandi tidak sesuai dengan Kata Sandi').css('color', 'red');
+            $("#DOB").css("border-bottom", "green 1px solid");
+        }
 
-    }else {
-      $('#error-message-password-confirm').text('');
-    }
-    // console.log("Nama Depana : ", namadepan);
-    // console.log("Nama Belakang : ", namabelakang);
-    // console.email("Email : ",email);
-    // console.log("Nomor ponsel : ", phoneNumber);
-    // console.log("Password : ", password);
-    // console.log("Confirm Password : ", passwordConfirm);
-    // Mengalihkan halaman jika semua validasi berhasil
-    if (isValid) {
-        // var xhr = new XMLHttpRequest();
-        // xhr.open("POST", $('form').action, true);
+        // Validasi Password
+        var password = $("#password").val();
+        if (password === "") {
+            isvalid = false;
+            $("#error-message-password").text("Kata Sandi harus diisi");
+            $("#password").css("border-bottom", "red 1px solid");
+        } else if (!/(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}/.test(password)) {
+            $("#error-message-password").text("Kata Sandi tidak memenuhi syarat");
+            $("#password").css("border-bottom", "red 1px solid");
+        }else{
 
-        // window.location.href = '/get-register-page1-user-confirm';
+            $("#password").css("border-bottom", "green 1px solid");
+        }
 
-    }else{
-        $('small').show();
-    }
+        // Validasi Konfirmasi Password
+        var confirmPassword = $("#password-confirm").val();
+        if (confirmPassword === "") {
+            isvalid = false;
+            $("#error-message-password-confirm").text("Konfirmasi Kata Sandi harus diisi");
+            $("#password-confirm").css("border-bottom", "red 1px solid");
+        } else if (confirmPassword !== password) {
+            isvalid = false;
+            $("#error-message-password-confirm").text("Konfirmasi Kata Sandi tidak cocok");
+            $("#password-confirm").css("border-bottom", "red 1px solid");
+        }else{
 
-  });
+            $("#password-confirm").css("border-bottom", "green 1px solid");
+        }
 
+        // Jika tidak ada error, submit form
+        if (isvalid == true) {
+            $("form").attr("action", "/register-page1-user-confirm");
+            $("form").attr("method", "POST");
+            $("form").unbind("submit").submit();
+        }else{
+            global = isvalid;
+            return;
+        }
+    });
 
+    // Menghapus border merah saat input berubah
+    // $("input").on("input", function () {
+    //     $(this).css("border-bottom", "green 1px solid");
+    // });
 });
+
+console.log(global);
 

@@ -15,6 +15,7 @@ class MsStatusSeeder extends Seeder
     public function run()
     {
         $data = [
+
             ['statusId' => 'ST001', 'status' => 'Not Verified'],
             ['statusId' => 'ST002', 'status' => 'Verified'],
             ['statusId' => 'ST003', 'status' => 'Suspend'],

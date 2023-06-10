@@ -1,0 +1,105 @@
+.register-table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.register-table-left {
+    flex-basis: 50%;
+    padding-right: 30px;
+}
+
+.register-table-right {
+    flex-basis: 50%;
+    text-align: center;
+}
+
+.image-signup {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-input {
+    margin-bottom: 20px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form input {
+    width: 100%;
+    height: 40px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+form button {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+}
+
+.sign-up-text {
+    margin-top: 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.sign-up-deskripsi {
+    font-size: 20px;
+    color: #666;
+}
+
+form input[type="text"], form input[type="password"] {
+    padding-left: 40px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 20px;
+}
+
+form input[type="text"] {
+    background-image: url('CareFinder-Register-UserName-Logo.svg');
+}
+
+form input[type="password"] {
+    background-image: url('CareFinder-Register-Password-Logo.svg');
+}
+
+small {
+    display: block;
+    margin-top: -10px;
+    color: red;
+    font-size: 14px;
+}
+
+
+@media (max-width: 768px) {
+    .register-table {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .register-table-left, .register-table-right {
+        flex-basis: 100%;
+        padding: 0;
+        text-align: center;
+    }
+
+    .register-table-right img {
+        width: 80%;
+    }
+
+    form {
+        width: 80%;
+        margin: 0 auto;
+    }
+}

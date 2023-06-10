@@ -1,0 +1,191 @@
+body{
+    background: #F1F1E8;
+}
+
+.gradien{
+    background: linear-gradient(180deg, #206A5D 0%, #F1F1E8 88%, #F1F1E8 100%);
+    background-attachment: fixed;
+}
+
+.profile-container{
+    color: white;
+    padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.user-profile{
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    gap: 120px;
+}
+
+.user-main-account{
+
+    padding: 66px 40px 66px 40px;
+}
+
+.user-main-account button{
+    /* border-style: 3px solid #B2B6A3; */
+    border: 3px #B2B6A3 solid;
+    font-size: 17px;
+    padding: 5px 10px 5px 10px;
+    font-weight: bold;
+}
+
+
+
+.userDOB-container{
+
+    width: fit-content;
+    height: fit-content;
+    margin: 0 66px 0 0;
+    text-align: center;
+
+
+
+    background: #B44D4D;
+    border: 1px solid #6A3F3F;
+    border-radius: 30px;
+
+}
+
+.userDOB-container div{
+    padding: 10px 30px 10px 30px;
+}
+
+.userDOB-container .back{
+    padding-top: 2px;
+    padding-bottom: 20px;
+    color: black;
+    background: #FFFF;
+    border-radius: 0 0 30px 30px;
+}
+
+.userDOB-container .back .user-month{
+    font-weight: bold;
+    padding-top: 0;
+    padding-bottom:0;
+}
+
+.userDOB-container .back .user-day{
+    font-weight: bold;
+    font-size: 50px;
+    padding: 18px 0 18px 0;
+    background: #E1E1E1;
+    box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+
+.user-body-info{
+    background: #206A5D;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* gap: 100px; */
+}
+
+.user-body-info div{
+    color: white;
+    padding: 20px 0 20px 0;
+    text-align: center;
+
+}
+
+.user-body-info div h4{
+    font-weight: lighter;
+}
+
+.user-body-info div img{
+    filter: brightness(0) invert(1) grayscale(1);
+    padding-bottom: 2px;
+}
+
+.user-profile-info{
+    padding-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.user-profile-info .profile-container{
+    width: 80%;
+    background: #FFFF;
+    display: inline;
+    padding: 0 0 0 20px;
+}
+
+.user-profile-info .profile-container div{
+    display: flex;
+    align-items: center;
+
+}
+
+.user-profile-info .profile-container div label{
+    color: #206A5D;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 60px;
+}
+
+.user-profile-info .profile-container div span{
+    color: black;
+    font-size: 30px;
+}
+
+.user-insurance{
+
+    padding-top: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.user-insurance .insurance-container{
+    background: #FFFF;
+    display: flex;
+    align-items: center;
+    padding: 20px 10px 20px 60px;
+    gap: 60px;
+
+}
+
+.user-insurance .insurance-container .insurance-detail{
+    width: 100%;
+}
+
+
+.user-container{
+    width: 80%;
+}
+
+
+footer{
+    width: 100%;
+    background: #F1F1E8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-container{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-container .logout button{
+    border: none;
+    background: none;
+    color: #206A5D;
+    text-decoration: underline;
+}
+
+
+

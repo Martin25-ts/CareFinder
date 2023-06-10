@@ -15,6 +15,6 @@ class PeopleDetail extends Model
 
     ];
     public function people(){
-        return $this->belongsTo(People::class);
+        return $this->belongsTo(msuser::class);
     }
 }

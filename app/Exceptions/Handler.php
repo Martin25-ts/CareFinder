@@ -30,12 +30,17 @@ class Handler extends ExceptionHandler
 
     public function render($request, Throwable $exception)
     {
-        if ($exception instanceof QueryException || $exception instanceof PDOException) {
-            return redirect()->route('error');
-        }
+        // if ($exception instanceof QueryException || $exception instanceof PDOException) {
+        //     return redirect()->route('error');
+        // }
 
         if ($exception instanceof RouteNotFoundException) {
             return redirect('/');
+        }
+
+        if ($exception instanceof PDOException && $exception->getMessage() === "SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it") {
+            dd($exception);
+            return redirect()->route('error');
         }
 
         return parent::render($request, $exception);

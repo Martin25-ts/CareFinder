@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
+
     /**
      * Run the migrations.
      *
@@ -23,13 +24,16 @@ return new class extends Migration
             $table->string('userprofile', 100)->nullable();
             $table->integer('userheight')->nullable();
             $table->integer('userweight')->nullable();
-            $table->char('bloodId', 5);
-            $table->char('relationshipId', 5);
+            $table->date('userDOB')->nullable();
+            $table->char('bloodId', 5)->nullable();
+            $table->char('relationshipId', 5)->nullable();
             $table->string('userinsurance', 50)->nullable();
             $table->string('userdisesase', 100)->nullable();
-            $table->char('genderId', 5);
-            $table->char('statusId', 5);
+            $table->char('genderId', 5)->nullable();
+            $table->char('statusId', 5)->nullable();
             $table->string('remember_token',255)->nullable();
+            $table->date('updated_at');
+            $table->date('created_at');
             $table->foreign('bloodId')->references('bloodId')->on('msblood')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('relationshipId')->references('relationshipId')->on('msrelationship')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('genderId')->references('genderId')->on('msgender')->onDelete('cascade')->onUpdate('cascade');

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\People;
+use App\Models\msuser;
 use Illuminate\Http\Request;
 
 
@@ -14,7 +14,7 @@ class PeopleController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-        $people = new People();
+        $people = new msuser();
         return view('dashboard',compact('people'));
     }
 
@@ -38,13 +38,19 @@ class PeopleController extends Controller
     }
 
     public function inputregister(Request $req){
-        $people = new People();
-        $people->namadepan = $req->namadepan;
-        $people->namabelakang = $req->namabelakang;
-        $people->email = $req->email;
-        $people->phone_number = $req->phone_number;
-        $people->password = $req->password;
-        $people->password_confirm = $req->password_confirm;
+        $lastUserId = msuser::max('userid');
+        $lastUserIdNumber = substr($lastUserId, 2);
+        $newUserIdNumber = (int)$lastUserIdNumber + 1;
+        $newUserId = sprintf('US%03d', $newUserIdNumber);
+
+        $people = new msuser();
+        $people->userid = $newUserId;
+        $people->userfname = $req->namadepan;
+        $people->userlname = $req->namabelakang;
+        $people->password = bcrypt($req->password);
+        $people->userphone = $req->phone_number;
+        $people->useremail = $req->email;
+        $people->userDOB = $req->userDOB;
 
         $people->save();
 

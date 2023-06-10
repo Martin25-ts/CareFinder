@@ -16,6 +16,7 @@ class MsGenderSeeder extends Seeder
     public function run()
     {
         $data = [
+            ['genderId' => 'GN000', 'gendername' => 'required'],
             ['genderId' => 'GN001', 'gendername' => 'Male'],
             ['genderId' => 'GN002', 'gendername' => 'Female'],
             ['genderId' => 'GN003', 'gendername' => 'Prefer not to say'],

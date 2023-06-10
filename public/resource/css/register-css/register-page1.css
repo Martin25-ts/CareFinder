@@ -1,0 +1,148 @@
+.form-input form div img{
+
+    /* buat ngatur logo dalam tag input */
+    position: absolute;
+    padding: 13px 15px 13px 7px;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+
+}
+
+.form-input form div input{
+    /* padding: 15px 12px 0px 137px; */
+    /* padding-left: 0%; */
+
+    letter-spacing: 0.5px;
+    font-size: 17px;
+
+    border: none;
+    border-bottom: green 1px solid;
+    outline: none;
+    background-color:#E7E7E7;
+}
+
+form input[type="text"], form input[type="password"] {
+    padding: 15px 5px 8px 40px;
+    width: 300px;
+    text-align: left;
+}
+
+form input[type="date"]{
+    padding: 15px 0 8px 40px;
+
+    /* gap: px; */
+}
+
+/* .form-input-date::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background-image: url('https://img.icons8.com/ios/50/expand-arrow--v2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+  } */
+/* form input[type="date"]::-webkit-calendar-picker-indicator {
+
+    color: rgba(0, 0, 0, 0);
+    opacity: 1
+}
+form input[type="date"]::-webkit-calendar-picker-indicator::after{
+    content: '';
+    display: block;
+    background: url(https://img.icons8.com/ios/50/expand-arrow--v2.png) no-repeat;
+    background-size: 10%;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+} */
+
+.register-table-left form div input:-ms-input-placeholder  {
+
+    font-size: 17px;
+    font-weight: 400;
+    font-family: 'Oxanium', cursive;
+    text-align: left;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.register-table-left form div input::-moz-placeholder  {
+    font-size: 17px;
+    font-weight: 400;
+    font-family: 'Oxanium', cursive;
+
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.register-table-left form div input:-moz-placeholder  {
+    font-size: 17px;
+    font-weight: 400;
+    font-family: 'Oxanium', cursive;
+
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.register-table-left form div input::-webkit-input-placeholder  {
+    font-size: 17px;
+    font-weight: 400;
+    font-family: 'Oxanium', cursive;
+
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.register-table-left form div input:focus:-ms-input-placeholder  {
+    font-size: 17px;
+    font-weight: 400;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.register-table-left form div input:focus::-moz-placeholder  {
+    font-size: 17px;
+    font-weight: 400;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.register-table-left form div input:focus:-moz-placeholder  {
+    font-size: 17px;
+    font-weight: 400;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.register-table-left form div input:focus::-webkit-input-placeholder  {
+    font-size: 17px;
+    font-weight: 400;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+
+.form-input form div small{
+    display: none;
+}
+
+
+.register-table-left form button{
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 25px;
+    color: #FFFFFF;
+    padding: 7px 53px;
+    margin-right: -208px;
+
+    width: fit-content;
+    height: fit-content;
+    background: #206A5D;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    border: none;
+
+    /* position: absolute; */
+}
+
+
+

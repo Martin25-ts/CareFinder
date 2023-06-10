@@ -10,13 +10,16 @@
 {{-- ini buat ngisi href style css --}}
 @push('style-conten')
     <link rel="stylesheet" type="text/css" href="{{ asset('resource/css/login-regis-button-main.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('resource/css/register-css/register-tab1.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('resource/css/register-css/responsive-register.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('resource/css/register-css/register-page-main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('resource/css/register-css/register-page1.css') }}">
+    {{-- <link rel="stylesheet" type="text/css" href="{{ asset('resource/css/register-css/responsive-register.css') }}"> --}}
     <link rel="shortcut icon" href="{{ asset('resource/image/logo/Logo Bulet.png') }}">
     @endpush
 
 @push('script-conten')
     <script type="text/javascript" src="{{ asset('resource/js/register-js/Register-Validate.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('resource/js/register-js/css.js') }}"></script>
+
 @endpush
 
 
@@ -41,59 +44,65 @@
 @endsection()
 
 @section('conten')
-    <div style="font-family: 'Oxanium', cursive; " class="register-table1">
+    <div class="register-table">
         <div class="register-table-left">
             <div class="image-signup">
                 <img src="{{ asset('resource/image/Regis/CareFinder-Register-Title-Logo.svg') }}" alt="logo-auth-login">
-                <h1 class="sign-up-text" style="font-size: 40px;">Sign Up</h1>
-                <h4 class="sign-up-deskripsi" style="font-size: 40px;  font-weight: 600;color: #615D5D;font-size: 20px;line-height: 25px;">Daftarkan Akunmu</h4>
+                <h1 class="sign-up-text">Sign Up</h1>
+                <h4 class="sign-up-deskripsi">Daftarkan Akunmu</h4>
             </div>
+            <div class="form-input">
+                <form method="POST" action="/register-page1-user-confirm">
+                    @csrf
+                    <div class="form-input-nama-depan" >
+                        <img width="31" height="31" style="opacity: 50%" src="https://img.icons8.com/material-rounded/48/000000/user.png" alt="user-logo"/>
+                        <input type="text" name="namadepan" id="namadepan" placeholder="Nama Depan" autocomplete="off">
 
-            <form action="/register-page1-confirm-next" method="POST" >
+                        <small id="error-message-namadepan">error-message</small>
+                    </div>
 
-                <div class="form-input-nama-depan" >
-                    <img src="{{ asset('resource/image/Regis/CareFinder-Register-UserName-Logo.svg')}}" alt="nama-depan-logo">
-                    <input type="text" name="namadepan" id="namadepan" placeholder="Nama Depan" autocomplete="off">
-                    <br>
-                    <small id="error-message-namadepan" style="position: absolute; display: flex; padding-left: 44px; font-family: 'Oxanium', cursive;">error-message</small>
-                </div>
+                    <div class="form-input-nama-belakang" >
+                        <img width="31" height="31" style="opacity: 50%" src="https://img.icons8.com/material-rounded/48/000000/user.png" alt="user-logo"/>
+                        <input type="text" name="namabelakang" id="namabelakang" placeholder="Nama Belakang" autocomplete="off">
+                        <small id="error-message-namabelekang">error-message</small>
+                    </div>
 
-                <div class="form-input-nama-belakang" >
-                    <img src="{{ asset('resource/image/Regis/CareFinder-Register-UserName-Logo.svg') }}" alt="nama-belakang-logo">
-                    <input type="text" name="namabelakang" id="namabelakang" placeholder="Nama Belakang" autocomplete="off">
-                    <small id="error-message-namabelekang" style="position: absolute; display: flex; padding-left: 44px; font-family: 'Oxanium', cursive;">error-message</small>
-                </div>
+                    <div class="form-input-email" >
+                        <img width="24" height="24" style="opacity: 50%" src="https://img.icons8.com/external-flat-icons-inmotus-design/67/external-Email-antivirus-flat-icons-inmotus-design.png" alt="user-email"/>
+                        <input type="text" name="email" id="email" placeholder="Email" autocomplete="off" >
+                        <small id="error-message-email">error-message</small>
+                    </div>
 
-                <div class="form-input-email" >
-                    <img src="{{ asset('resource/image/Regis/CareFinder-Register-Email-Logo.svg') }}" alt="email-logo">
-                    <input type="text" name="email" id="email" placeholder="Email" autocomplete="off" >
-                    <small id="error-message-email" style="position: absolute; display: flex; padding-left: 44px; font-family: 'Oxanium', cursive;">error-message</small>
-                </div>
+                    <div class="form-input-phone-number" >
+                        <img width="24" height="24" style="opacity: 50%" src="https://img.icons8.com/ios-filled/50/phone.png" alt="user-phone"/>
+                        <input type="text" name="phone_number" id="phone-number" placeholder="No Telepon" autocomplete="off">
+                        <small id="error-message-phone-number">error-message</small>
+                    </div>
 
-                <div class="form-input-phone-number" >
-                    <img src="{{ asset('resource/image/Regis/CareFinder-Register-Phone-Logo.svg') }}" alt="phone-number-logo">
-                    <input type="" name="phone_number" id="phone-number" placeholder="No Telepon" autocomplete="off">
-                    <small id="error-message-phone-number" style="position: absolute; display: flex; padding-left: 44px; font-family: 'Oxanium', cursive;">error-message</small>
-                </div>
+                    <div class="form-input-dob">
+                        <img width="24" height="24" style="opacity: 50%" src="https://img.icons8.com/ios-filled/50/calendar--v1.png" alt="user-dob"/>
+                        <input type="date" name="userDOB" id="DOB">
+                        <small id="error-message-dob">error-message</small>
+                    </div>
 
-                <div class="form-input-kata-sandi" >
-                    <img src="{{ asset('resource/image/Regis/CareFinder-Register-Password-Logo.svg') }}" alt="nama-depan-logo">
-                    <input type="password" name="password" id="password" placeholder="Kata Sandi" autocomplete="off">
-                    <small id="error-message-password" style="position: absolute; display: flex; padding-left: 44px; font-family: 'Oxanium', cursive;">error-message</small>
-                </div>
+                    <div class="form-input-kata-sandi" >
+                        <img width="20" height="20" style="opacity: 50%" src="https://img.icons8.com/metro/26/password.png" alt="user-password"/>
+                        <input type="password" name="password" id="password" placeholder="Kata Sandi" autocomplete="off">
+                        <small id="error-message-password">error-message</small>
+                    </div>
 
-                <div class="form-input-confirm-kata-sandi" >
-                    <img src="{{ asset('resource/image/Regis/CareFinder-Register-Password-Logo.svg') }}" alt="nama-depan-logo">
-                    <input type="password" name="password_confirm" id="password-confirm" placeholder="Konfirmasi Kata Sandi" autocomplete="off">
-                    <small id="error-message-password-confirm" style="position: absolute; display: flex; padding-left: 44px; font-family: 'Oxanium', cursive;">error-message</small>
-                </div>
-                <button type="submit" class="my-button" id="my-button">Selanjutnya</button>
-            </form>
-
+                    <div class="form-input-confirm-kata-sandi" >
+                        <img width="20" height="20" style="opacity: 50%" src="https://img.icons8.com/metro/26/password.png" alt="user-password"/>
+                        <input type="password" name="password_confirm" id="password-confirm" placeholder="Konfirmasi Kata Sandi" autocomplete="off">
+                        <small id="error-message-password-confirm">error-message</small>
+                    </div>
+                    <button type="submit" class="my-button" id="my-button">Next</button>
+                </form>
+            </div>
         </div>
 
-        <div class="register-table-right" style="display: block;"  >
-            <img src="{{ asset('resource/image/logo/Logo (Kosongan).svg') }}" alt="logo-CareFinder" style="width: ">
+        <div class="register-table-right" style="display: block">
+            <img src="{{ asset('resource/image/logo/Logo (Kosongan).svg') }}" alt="logo-CareFinder">
 
         </div>
     </div>

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\People;
+use App\Models\msuser;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Session;
 class AuthController extends Controller
 {
     public function loginpage(){
-        $people = new People();
+        $people = new msuser();
         return view('login',compact('people'));
     }
 
@@ -27,9 +27,9 @@ class AuthController extends Controller
         ];
 
         if ($req->rememberme) {
-            Cookie::queue('mycookie',$req->email,5);
+            Cookie::queue('mycookie',$req->email,9999999999999999);
 
-            Cookie::queue('mypassword',$req->password,5);
+            Cookie::queue('mypassword',$req->password,720);
         }
         if (Auth::attempt($credentials,true)) {
             Session::put('mysession',$credentials);

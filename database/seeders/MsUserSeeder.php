@@ -31,7 +31,8 @@ class MsUserSeeder extends Seeder
             'userdisesase' => 'Kurang kasih sayang perempuan',
             'genderId' => 'GN001',
             'statusId' => 'ST001',
-            'remember_token' => 'NULL'
+            'remember_token' => 'NULL',
+            'userDOB' => 'NULL'
         ];
 
         DB::table('msuser')->insert($data);

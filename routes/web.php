@@ -35,5 +35,5 @@ Route::get('/error', function () {
 })->name('error');
 
 
-Route::post('register-page1-confirm-next',[PeopleController::class,'inputregister']);
+Route::post('/register-page1-user-confirm',[PeopleController::class,'inputregister']);
 Route::post('/login',[AuthController::class,'login']);

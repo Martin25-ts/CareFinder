@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Oxanium', cursive;
+}
+
+
+body{
+    background: linear-gradient(180deg, #206A5D 0%, #F1F1E8 80%, #F1F1E8 90%);
+    background-attachment: fixed;
+
+}
+
+.register-table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: fit-content;
+    max-width: fit-content;
+    background: #BFDCAE;
+    box-shadow: 0px 12px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 12px 12px 12px 12px;
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.register-table-left{
+    padding: 20px 20px 20px 28px;
+    border-radius: 12px 0 0 12px;
+    background: #FFFF;
+    text-align: center;
+}
+
+.register-table-left form div{
+    align-items: center;
+    text-align: left;
+    display: grid;
+    padding-bottom: 10px;
+}
+
+.register-table-right{
+    border-radius: 0 12px 12px 0;
+    background: #BFDCAE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    /* .register-table {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .register-table-left, .register-table-right {
+        flex-basis: 100%;
+        padding: 0;
+        text-align: center;
+    }
+
+    .register-table-right img {
+        width: 80%;
+    }
+
+    form {
+        width: 80%;
+        margin: 0 auto;
+    } */
+
+
+    .register-table .register-table-right{
+        display: none;
+
+    }
+}
+
+
+
+

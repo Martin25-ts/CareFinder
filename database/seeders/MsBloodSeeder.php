@@ -16,6 +16,7 @@ class MsBloodSeeder extends Seeder
     public function run()
     {
         $data = [
+            ['bloodId' => 'BL000', 'bloodName' => 'required'],
             ['bloodId' => 'BL001', 'bloodName' => 'A'],
             ['bloodId' => 'BL002', 'bloodName' => 'B'],
             ['bloodId' => 'BL003', 'bloodName' => 'AB'],
