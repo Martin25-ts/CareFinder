@@ -47,9 +47,16 @@
     <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
 
         <div class="container px-3">
-            <a class="navbar-brand text-dark" href="/">
-                <img src="{{ asset('resource/image/logo/logo.png') }}" alt="" width="78%" />
-            </a>
+            @auth
+                <a class="navbar-brand text-dark" href="/dashboard">
+                    <img src="{{ asset('resource/image/logo/logo.png') }}" alt="" width="78%" />
+                </a>
+            @else
+                <a class="navbar-brand text-dark" href="/">
+                    <img src="{{ asset('resource/image/logo/logo.png') }}" alt="" width="78%" />
+                </a>
+            @endauth
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
@@ -58,7 +65,13 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto py-4 py-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link px-lg-3 py-2 pt-lg-3 active" href="/" style="color: #f1f1e8">Home</a>
+                        @auth
+                            <a class="nav-link px-lg-3 py-2 pt-lg-3 active" href="/dashboard" style="color: #f1f1e8">Home</a>
+                        @else
+                            <a class="nav-link px-lg-3 py-2 pt-lg-3 active" href="/" style="color: #f1f1e8">Home</a>
+
+                        @endauth
+
                     </li>
 
                             @auth
@@ -93,10 +106,10 @@
                                 <a href="/{{ explode(' ', trim(Auth::user()->userfname))[0] }}-profile">
                                     @if (Auth::user()->userprofile === 'required')
 
-                                        @if (Auth::user()->genderId === 'GN001')
+                                        @if (Auth::user()->genderId === 'GN002')
                                             <img src="{{ asset('resource/profileuser/woman-default.png') }}"
                                                 style="max-width: 59px; max-height: 59px;" alt="error">
-                                        @elseif (Auth::user()->genderId === 'GN002')
+                                        @elseif (Auth::user()->genderId === 'GN001')
 
                                             <img src="{{ asset('resource/profileuser/male-default.png') }}"
                                                 style="max-width: 59px; max-height: 59px" alt="error">
@@ -234,94 +247,113 @@
             </div>
             <div class="row">
                 <div class="col-3">
-                    <div class="card hospital-card">
-                        <img src="https://source.unsplash.com/500x500?hospital-building-1" class="card-img-top"
-                            alt="img" />
-                        <div class="card-body py-4">
-                            <span class="badge-available">Tersedia</span>
-                            <h2 class="card-title hospital-name mb-0">RS Ibu Bapak</h2>
-                            <p class="card-text mt-2">Alamat, Kabupaten</p>
+                    <a href="/rspage">
+                        <div class="card hospital-card">
+                            <img src="https://source.unsplash.com/500x500?hospital-building-1" class="card-img-top"
+                                alt="img" />
+                            <div class="card-body py-4">
+                                <span class="badge-available">Tersedia</span>
+                                <h2 class="card-title hospital-name mb-0">RS Ibu Bapak</h2>
+                                <p class="card-text mt-2">Alamat, Kabupaten</p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-3">
-                    <div class="card hospital-card">
-                        <img src="https://source.unsplash.com/500x500?hospital-building-2" class="card-img-top"
-                            alt="img" />
-                        <div class="card-body py-4">
-                            <span class="badge-full">Penuh</span>
-                            <h2 class="card-title hospital-name mb-0">RS Ibu Bapak</h2>
-                            <p class="card-text mt-2">Alamat, Kabupaten</p>
+                    <a href="/rspage">
+                        <div class="card hospital-card">
+                            <img src="https://source.unsplash.com/500x500?hospital-building-2" class="card-img-top"
+                                alt="img" />
+                            <div class="card-body py-4">
+                                <span class="badge-full">Penuh</span>
+                                <h2 class="card-title hospital-name mb-0">RS Ibu Bapak</h2>
+                                <p class="card-text mt-2">Alamat, Kabupaten</p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-3">
-                    <div class="card hospital-card">
-                        <img src="https://source.unsplash.com/500x500?hospital-building-3" class="card-img-top"
-                            alt="img" />
-                        <div class="card-body py-4">
-                            <span class="badge-available">Tersedia</span>
-                            <h2 class="card-title hospital-name mb-0">RS Ibu Bapak</h2>
-                            <p class="card-text mt-2">Alamat, Kabupaten</p>
+                    <a href="/rspage">
+                        <div class="card hospital-card">
+                            <img src="https://source.unsplash.com/500x500?hospital-building-3" class="card-img-top"
+                                alt="img" />
+                            <div class="card-body py-4">
+                                <span class="badge-available">Tersedia</span>
+                                <h2 class="card-title hospital-name mb-0">RS Ibu Bapak</h2>
+                                <p class="card-text mt-2">Alamat, Kabupaten</p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-3">
-                    <div class="card hospital-card">
-                        <img src="https://source.unsplash.com/500x500?hospital-building-4" class="card-img-top"
-                            alt="img" />
-                        <div class="card-body py-4">
-                            <span class="badge-available">Tersedia</span>
-                            <h2 class="card-title hospital-name mb-0">RS Ibu Bapak</h2>
-                            <p class="card-text mt-2">Alamat, Kabupaten</p>
+
+                    <a href="/rspage">
+                        <div class="card hospital-card">
+                            <img src="https://source.unsplash.com/500x500?hospital-building-4" class="card-img-top"
+                                alt="img" />
+                            <div class="card-body py-4">
+                                <span class="badge-available">Tersedia</span>
+                                <h2 class="card-title hospital-name mb-0">RS Ibu Bapak</h2>
+                                <p class="card-text mt-2">Alamat, Kabupaten</p>
+                            </div>
                         </div>
-                    </div>
+
+                    </a>
                 </div>
             </div>
             <div class="row mt-4">
                 <div class="col-3">
-                    <div class="card hospital-card">
-                        <img src="https://source.unsplash.com/500x500?hospital-building-5" class="card-img-top"
-                            alt="img" />
-                        <div class="card-body py-4">
-                            <span class="badge-full">Penuh</span>
-                            <h2 class="card-title hospital-name mb-0">RS Ibu Bapak</h2>
-                            <p class="card-text mt-2">Alamat, Kabupaten</p>
+
+                    <a href="/rspage">
+                        <div class="card hospital-card">
+                            <img src="https://source.unsplash.com/500x500?hospital-building-5" class="card-img-top"
+                                alt="img" />
+                            <div class="card-body py-4">
+                                <span class="badge-full">Penuh</span>
+                                <h2 class="card-title hospital-name mb-0">RS Ibu Bapak</h2>
+                                <p class="card-text mt-2">Alamat, Kabupaten</p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-3">
-                    <div class="card hospital-card">
-                        <img src="https://source.unsplash.com/500x500?hospital-building-6" class="card-img-top"
-                            alt="img" />
-                        <div class="card-body py-4">
-                            <span class="badge-available">Tersedia</span>
-                            <h2 class="card-title hospital-name mb-0">RS Ibu Bapak</h2>
-                            <p class="card-text mt-2">Alamat, Kabupaten</p>
+                    <a href="/rspage">
+                        <div class="card hospital-card">
+                            <img src="https://source.unsplash.com/500x500?hospital-building-6" class="card-img-top"
+                                alt="img" />
+                            <div class="card-body py-4">
+                                <span class="badge-available">Tersedia</span>
+                                <h2 class="card-title hospital-name mb-0">RS Ibu Bapak</h2>
+                                <p class="card-text mt-2">Alamat, Kabupaten</p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-3">
-                    <div class="card hospital-card">
-                        <img src="https://source.unsplash.com/500x500?hospital-building-7" class="card-img-top"
-                            alt="img" />
-                        <div class="card-body py-4">
-                            <span class="badge-full">Penuh</span>
-                            <h2 class="card-title hospital-name mb-0">RS Ibu Bapak</h2>
-                            <p class="card-text mt-2">Alamat, Kabupaten</p>
+                    <a href="/rspage">
+                        <div class="card hospital-card">
+                            <img src="https://source.unsplash.com/500x500?hospital-building-7" class="card-img-top"
+                                alt="img" />
+                            <div class="card-body py-4">
+                                <span class="badge-full">Penuh</span>
+                                <h2 class="card-title hospital-name mb-0">RS Ibu Bapak</h2>
+                                <p class="card-text mt-2">Alamat, Kabupaten</p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-3">
-                    <div class="card hospital-card">
-                        <img src="https://source.unsplash.com/500x500?hospital-building-8" class="card-img-top"
-                            alt="img" />
-                        <div class="card-body py-4">
-                            <span class="badge-full">Penuh</span>
-                            <h2 class="card-title hospital-name mb-0">RS Ibu Bapak</h2>
-                            <p class="card-text mt-2">Alamat, Kabupaten</p>
+                    <a href="/rspage">
+                        <div class="card hospital-card">
+                            <img src="https://source.unsplash.com/500x500?hospital-building-8" class="card-img-top"
+                                alt="img" />
+                            <div class="card-body py-4">
+                                <span class="badge-full">Penuh</span>
+                                <h2 class="card-title hospital-name mb-0">RS Ibu Bapak</h2>
+                                <p class="card-text mt-2">Alamat, Kabupaten</p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>

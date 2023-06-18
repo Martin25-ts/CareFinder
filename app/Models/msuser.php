@@ -12,7 +12,7 @@ class msuser extends Model
 
     use HasFactory;
     protected $table = 'msuser';
-
+    protected $primaryKey = 'userid';
     protected $attributes = [
         'userid' => 'required',
         'userfname' => 'required',
@@ -20,7 +20,7 @@ class msuser extends Model
         'password' => 'required',
         'userphone' => 'required',
         'useremail' => 'required',
-        'userprofile' => 'resource\profileuser\prefer-not-to-say-default.png',
+        'userprofile' => 'required',
         'userheight' => 0,
         'userweight' => 0,
         'userDOB' => 'required',

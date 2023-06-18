@@ -48,7 +48,7 @@
                 <h4 class="sign-up-deskripsi" style="font-size: 40px;  font-weight: 600;color: #615D5D;font-size: 20px;line-height: 25px;">Daftarkan Akunmu</h4>
             </div>
             <div class="form-input">
-                <form  action="" method="post">
+                <form  action="/login" method="GET">
 
                     <div class="form-input-jalan" >
                         {{-- <img src="{{ asset('resource/image/Regis/CareFinder-Register-Jalan-Logo.svg')}}" alt="jalan-logo"> --}}

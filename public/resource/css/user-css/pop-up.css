@@ -1,5 +1,5 @@
 
-.pop-up-content{
+.pop-up-content, .pop-up-update{
 
     top: 50%;
     left: 50%;
@@ -45,6 +45,10 @@
     color: #FFF;
 }
 
+
+
+
+
 .pop-up-content div button{
     background: #FFF;
     border-radius: 30px;
@@ -61,18 +65,33 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-.blur-page{
-    filter: blur(4px);
+.pop-up-update form .up-row{
+    display: flex;
+    gap: 20px;
+    /* justify-content: flex-start; */
 
 }
+
+.pop-up-update form .up-row div div, .input-disease-container{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.pop-up-update input, select{
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 3px solid #B0B0B0;
+    font-family: 'Poppins';
+
+}
+.pop-up-update #disease {
+    max-width: 524px;
+    height: 200px; /* Adjust the desired height as per your requirement */
+    resize: vertical;
+    overflow: scroll;
+}
+
+
 
 

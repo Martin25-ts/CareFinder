@@ -16,6 +16,10 @@ body{
     gap: 90px;
 }
 
+
+
+
+
 .user-profile{
     align-items: center;
     background: rgba(255, 255, 255, 0.2);
@@ -116,14 +120,23 @@ body{
 .user-profile-info .profile-container{
     width: 80%;
     background: #FFFF;
-    display: inline;
+    display: flex;
+    display: flex;
+    justify-content: left;
+    align-items: center;
     padding: 0 0 0 20px;
 }
 
-.user-profile-info .profile-container div{
+.profile-container-left,.profile-container-right{
     display: flex;
-    align-items: center;
+    flex-direction: column;
+}
+.profile-container-left{
+    padding-left: 2%;
+}
 
+.profile-container-right{
+    gap: 15px;
 }
 
 .user-profile-info .profile-container div label{

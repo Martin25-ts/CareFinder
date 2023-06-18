@@ -1,0 +1,15 @@
+body{
+    background: linear-gradient(180deg, #206A5D 0%, #F1F1E8 88%, #F1F1E8 100%);
+    background-attachment: fixed;
+}
+
+
+#imageGroup{
+    padding-top: 11rem!important;
+}
+
+.btn-available {
+    background: #81b214!important;
+    border-radius: 10px!important;
+    color: white!important;
+}
